@@ -1,4 +1,4 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 using System.Collections.Generic;
 using Verse;
@@ -9,49 +9,69 @@ namespace SheldonClones
     [HarmonyPatch]
     public static class TryFindFreeSittingSpotOnThingPatch
     {
+        // Патч метода Toils_Ingest.TryFindFreeSittingSpotOnThing
         [HarmonyPatch(typeof(Toils_Ingest), "TryFindFreeSittingSpotOnThing")]
         public static class Patch_TryFindFreeSittingSpotOnThing
         {
             public static void Postfix(ref bool __result, Thing t, Pawn pawn, out IntVec3 cell)
             {
+                // По умолчанию место не найдено
                 cell = IntVec3.Invalid;
 
-                if (!__result)
+                // Если оригинальный метод не нашел место – сразу выходим
+                if (!__result || pawn.def != AlienDefOf.SheldonClone)
                     return;
 
-                // === 1. Если есть зарезервированное место, пробуем его ===
-                if (pawn.IsReservedForSitting())
+                // Если не клон Шелдона – используем стандартную логику (любой свободный спот на объекте t)
+                if (pawn.def != AlienDefOf.SheldonClone)
                 {
-                    IntVec3 reservedSpot = pawn.GetReservedSittingSpot();
-                    if (reservedSpot.IsValid && reservedSpot.InBounds(pawn.Map) && pawn.CanReserveSittableOrSpot(reservedSpot))
+                    foreach (IntVec3 spot in t.OccupiedRect())
                     {
-                        if (!ChairUtility.IsSomeoneAlreadySitting(reservedSpot, pawn.Map, pawn))
+                        if (spot.InBounds(pawn.Map) && pawn.CanReserveSittableOrSpot(spot))
                         {
-                            // Место свободно — садимся
-                            cell = reservedSpot;
-                            return;
-                        }
-                        else
-                        {
-                            __result = false;
+                            cell = spot;
                             return;
                         }
                     }
+                    // Если не найдено – есть в виду стоячий режим (но т.к. результат уже true, 
+                    // в оригинале клон бы нашел место на полу; здесь делаем __result=false)
+                    __result = false;
+                    return;
+                }
+
+                // 1. Если у клона уже есть свое место (резерв) – пытаемся сесть туда
+                if (pawn.IsReservedForSitting())
+                {
+                    IntVec3 reservedSpot = pawn.GetReservedSittingSpot();
+                    // Проверяем доступность клетки
+                    if (reservedSpot.InBounds(pawn.Map) && pawn.CanReserveSittableOrSpot(reservedSpot))
+                    {
+                        // Если там никого нет – садимся
+                        if (!ChairUtility.IsSomeoneAlreadySitting(reservedSpot, pawn.Map, pawn))
+                        {
+                            cell = reservedSpot;
+                            return;
+                        }
+                        // Если на месте кто-то сидит – пропускаем, НЕ снимая бронь
+                    }
                     else
                     {
-                        // Место стало недоступным или повреждено — очищаем
+                        // Если место недоступно (за пределами карты или не резервируемо) – снимаем бронь
                         pawn.RemoveReservedSittingSpot();
                     }
                 }
 
-
-
-                // === 2. Ищем свободное не назначенное место ===
+                // Получаем кэшированный список стульев
                 List<CompSheldonSeatAssignable> allSeats = CompSheldonSeatingManager.GetSeatsForMap(pawn.Map);
-                foreach (var seatComp in allSeats)
+
+                // 2. Ищем любое свободное место (стул без владельца)
+                foreach (CompSheldonSeatAssignable seatComp in allSeats)
                 {
-                    if (seatComp.GetAssignedPawns().Count == 0)
+                    List<Pawn> owners = seatComp.GetAssignedPawns();
+                    // Если стул свободен (никому не принадлежит)
+                    if (owners.Count == 0)
                     {
+                        // Проверяем каждую клетку, занимаемую стулом
                         foreach (IntVec3 spot in seatComp.parent.OccupiedRect())
                         {
                             if (spot.InBounds(pawn.Map) &&
@@ -59,6 +79,7 @@ namespace SheldonClones
                                 pawn.CanReserve(seatComp.parent) &&
                                 !ChairUtility.IsSomeoneAlreadySitting(spot, pawn.Map, pawn))
                             {
+                                // Присваиваем стул клону и резервируем место
                                 seatComp.AssignSheldon(pawn);
                                 pawn.SetReservedSittingSpot(spot);
                                 cell = spot;
@@ -68,10 +89,12 @@ namespace SheldonClones
                     }
                 }
 
-                // === 3. Пробуем временно использовать чужое место ===
-                foreach (var seatComp in allSeats)
+                // 3. Нет свободных не назначенных мест – пробуем временно использовать чужой стул
+                foreach (CompSheldonSeatAssignable seatComp in allSeats)
                 {
-                    if (seatComp.GetAssignedPawns().Count > 0 && !seatComp.BelongsToSheldon(pawn))
+                    List<Pawn> owners = seatComp.GetAssignedPawns();
+                    // Стул назначен другому клону
+                    if (owners.Count > 0 && !seatComp.BelongsToSheldon(pawn))
                     {
                         foreach (IntVec3 spot in seatComp.parent.OccupiedRect())
                         {
@@ -80,6 +103,7 @@ namespace SheldonClones
                                 pawn.CanReserve(seatComp.parent) &&
                                 !ChairUtility.IsSomeoneAlreadySitting(spot, pawn.Map, pawn))
                             {
+                                // Используем место без присвоения
                                 cell = spot;
                                 return;
                             }
@@ -87,77 +111,8 @@ namespace SheldonClones
                     }
                 }
 
-                // === 4. Ничего не найдено — будет есть стоя ===
+                // 4. Никакого свободного места нет – клон будет есть стоя
                 __result = false;
-            }
-        }
-
-        public static class ChairUtility
-        {
-            public static bool IsSomeoneAlreadySitting(Thing chair, Pawn askingPawn)
-            {
-                if (chair == null || chair.Map == null)
-                    return false;
-
-                return IsSomeoneAlreadySitting(chair.Position, chair.Map, askingPawn);
-            }
-
-            public static bool IsSomeoneAlreadySitting(IntVec3 cell, Map map, Pawn askingPawn)
-            {
-                if (map == null) return false;
-
-                var things = cell.GetThingList(map);
-                for (int i = 0; i < things.Count; i++)
-                {
-                    if (things[i] is Pawn otherPawn && otherPawn != askingPawn)
-                    {
-                        Job job = otherPawn.CurJob;
-                        if (job != null && job.targetA.Cell == cell)
-                        {
-                            JobDef jobDef = job.def;
-                            if (jobDef == JobDefOf.Ingest || 
-                                jobDef == JobDefOf.Lovin ||
-                                jobDef == JobDefOf.Meditate || 
-                                jobDef == JobDefOf.UseCommsConsole ||
-                                jobDef == JobDefOf.LayDown || 
-                                jobDef == JobDefOf.Wait_MaintainPosture)
-                            {
-                                return true;
-                            }
-                        }
-                    }
-                }
-
-                return false;
-            }
-
-            // Новый метод: возвращает пешку, сидящую на клетке
-            public static Pawn GetSittingPawnAt(IntVec3 cell, Map map, Pawn excluding = null)
-            {
-                if (map == null) return null;
-
-                var things = cell.GetThingList(map);
-                foreach (Thing thing in things)
-                {
-                    if (thing is Pawn p && p != excluding)
-                    {
-                        Job job = p.CurJob;
-                        if (job != null && job.targetA.Cell == cell)
-                        {
-                            JobDef jobDef = job.def;
-                            if (jobDef == JobDefOf.Ingest || 
-                                jobDef == JobDefOf.Lovin ||
-                                jobDef == JobDefOf.Meditate || 
-                                jobDef == JobDefOf.UseCommsConsole ||
-                                jobDef == JobDefOf.LayDown || 
-                                jobDef == JobDefOf.Wait_MaintainPosture)
-                            {
-                                return p;
-                            }
-                        }
-                    }
-                }
-                return null;
             }
         }
     }
