@@ -4,7 +4,7 @@
 	<InteractionDef>
 		<defName>SheldonWarnedForSittingInMySpot</defName>
     		<label>велел освободить своё место</label>
-    		<workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
+    		<workerClass>SheldonClones.InteractionWorker_SheldonWarned</workerClass>
     		<symbol>Things/Mote/SpeechSymbols/Insult</symbol>
 		<initiatorThought>SheldonWarnedForTakingMySeat</initiatorThought>
     		<logRulesInitiator>
