@@ -7,7 +7,6 @@
     		<workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
     		<symbol>Things/Mote/SpeechSymbols/Insult</symbol>
 		<initiatorThought>SheldonWarnedForTakingMySeat</initiatorThought>
-		<recipientThought>AnnoyedByChat</recipientThought>
     		<logRulesInitiator>
 			<rulesStrings>
         			<li>r_logentry->[INITIATOR_nameDef] уведомил [RECIPIENT_nameDef] о том, что тот сидит на его месте.</li>
