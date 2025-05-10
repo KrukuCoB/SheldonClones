@@ -1,51 +1,60 @@
-﻿using RimWorld;
-using System.Collections.Generic;
 using Verse;
 using Verse.AI;
-using static SheldonClones.TryFindFreeSittingSpotOnThingPatch;
+using RimWorld;
+using System.Collections.Generic;
 
 namespace SheldonClones
 {
     public class JobDriver_WaitNearMyChair : JobDriver
     {
-        private const int WaitTicks = 600;
-
         public override bool TryMakePreToilReservations(bool errorOnFailed) => true;
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            // 🧱 Проверка на корректность цели
-            if (!TargetA.IsValid || !TargetA.Cell.InBounds(Map))
+            // Проверяем наличие координаты персонального места
+            var mySpot = pawn.GetMySpot();
+            if (mySpot == null || !mySpot.Value.InBounds(Map))
             {
-                Log.Warning("[SheldonClones] JobDriver_WaitNearMyChair: TargetA невалиден или вне карты.");
+                Log.Warning("[SheldonClones] JobDriver_WaitNearMyChair: нет mySpot или оно вне карты.");
+                EndJobWith(JobCondition.Incompletable);
                 yield break;
             }
 
-            // 🔹 Подходим к месту
-            yield return Toils_Goto.GotoCell(TargetIndex.A, PathEndMode.Touch);
+            // Подходим к своей точке
+            yield return Toils_Goto.GotoCell(mySpot.Value, PathEndMode.Touch);
 
-            // ⏳ Ждём с интеракцией
-            Toil wait = new Toil
+            // Ожидание освобождения места + общение с захватчиком
+            Toil wait = new Toil();
+            wait.defaultCompleteMode = ToilCompleteMode.Never;
+
+            int ticksSinceLastInteraction = 0;
+
+            wait.tickAction = () =>
             {
-                initAction = () =>
+                if (!SheldonSpotUtility.IsMySpotOccupied(pawn))
                 {
-                    Pawn initiator = pawn;
-                    Pawn recipient = ChairUtility.GetSittingPawnAt(TargetA.Cell, Map, initiator);
-                    if (recipient != null && recipient != initiator)
+                    EndJobWith(JobCondition.Succeeded);
+                    return;
+                }
+
+                Pawn occupier = SheldonSpotUtility.GetOccupantOfMySpot(pawn);
+                if (occupier != null && occupier != pawn && pawn.interactions != null)
+                {
+                    InteractionDef def = DefDatabase<InteractionDef>.GetNamedSilentFail("SheldonWarnedForSittingInMySpot");
+                    if (def != null && ticksSinceLastInteraction >= 300)
                     {
-                        InteractionDef def = DefDatabase<InteractionDef>.GetNamed("SheldonWarnedForSittingInMySpot", false);
-                        if (def != null)
-                        {
-                            initiator.interactions.TryInteractWith(recipient, def);
-                        }
+                        pawn.interactions.TryInteractWith(occupier, def);
+                        ticksSinceLastInteraction = 0;
                     }
-                },
-                defaultCompleteMode = ToilCompleteMode.Delay,
-                defaultDuration = WaitTicks
+                    else
+                    {
+                        ticksSinceLastInteraction++;
+                    }
+                }
             };
 
-            wait.WithProgressBarToilDelay(TargetIndex.A); // Визуализация ожидания
-
+            wait.WithProgressBarToilDelay(TargetIndex.A);
+            wait.socialMode = RandomSocialMode.Off;
             yield return wait;
         }
     }
