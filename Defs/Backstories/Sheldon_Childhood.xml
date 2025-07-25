@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Defs>
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_Childhood</defName>
+		<title>личность Шелдона Купера</title>
+		<titleShort>гений</titleShort>
+		<slot>Childhood</slot>
+		<description>Обычные воспоминания Шелдона Купера, которые сформировали его личность. Данные воспоминания являются одинаковыми для всех клонов Шелдона.
+		</description>
+		<skillGains>
+			<Intellectual>16</Intellectual>
+		</skillGains>
+		<workDisables>
+		</workDisables>
+		<requiredWorkTags>
+			Intellectual
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>  <!-- Категория предыстории -->
+		</spawnCategories>
+		<disallowedTraits>
+			<Cannibal>1</Cannibal>
+			<Cannibal>2</Cannibal>
+		</disallowedTraits>
+		<passions>
+			<Intellectual>2</Intellectual>
+			<Social>0</Social>
+		</passions>
+		<femaleCommonality>100</femaleCommonality>
+	</AlienRace.AlienBackstoryDef>
+</Defs>

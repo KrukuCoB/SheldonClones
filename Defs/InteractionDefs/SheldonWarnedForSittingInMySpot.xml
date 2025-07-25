@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+ 
+  <!-- Шелдон просит освободить место -->
+  
+  <InteractionDef>
+    <defName>SheldonWarnedForSittingInMySpot</defName>
+    <label>велел освободить своё место</label>
+    <workerClass>SheldonClones.InteractionWorker_EvictFromSpot</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+	<initiatorThought>SheldonWarnedForTakingMySeat</initiatorThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] уведомил [RECIPIENT_nameDef] о том, что тот сидит на его месте.</li>
+        <li>r_logentry->[INITIATOR_nameDef] попросил [RECIPIENT_nameDef] освободить свое место.</li>
+		<li>r_logentry->[INITIATOR_nameDef] потребовал [RECIPIENT_nameDef] освободить его место.</li>
+		<li>r_logentry->[INITIATOR_nameDef] выгнал [RECIPIENT_nameDef] со своего места.</li>
+		<li>r_logentry->[INITIATOR_nameDef] настаивал, что [RECIPIENT_nameDef] сидит на его месте.</li>
+        <li>r_logentry->[INITIATOR_nameDef] объяснил [RECIPIENT_nameDef], что его место имеет идеальное расположение относительно обогревателя зимой и сквозняка летом.</li>
+	  </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <HediffDef>
+        <defName>SheldonStrike</defName>
+        <label>Страйк</label>
+        <description>Эта пешка обидела клона Шелдона и получила страйк. 3 страйка = полное игнорирование этой пешки.</description>
+        <hediffClass>SheldonClones.Hediff_SheldonStrike</hediffClass>
+		<comps>
+		  <li Class="SheldonClones.HediffCompProperties_SheldonStrikeDecay">
+			<severityDecayPerDay>0.1</severityDecayPerDay>
+		  </li>
+		</comps>
+        <stages>
+            <li>
+                <label>Первый</label>
+				<minSeverity>1.0</minSeverity>
+            </li>
+            <li>
+                <label>Второй</label>
+				<minSeverity>2.0</minSeverity>
+            </li>
+            <li>
+                <label>Третий</label>
+				<minSeverity>3.0</minSeverity>
+			</li>
+        </stages>
+    </HediffDef>
+
+</Defs>
+

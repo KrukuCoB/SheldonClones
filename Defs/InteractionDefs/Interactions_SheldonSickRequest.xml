@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <InteractionDef>
+    <defName>SheldonSickRequest</defName>
+    <label>просьба о песне</label>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] попросил [RECIPIENT_nameDef] спеть песню о пушистом котенке.</li>
+        <li>r_logentry->[INITIATOR_nameDef] жалобно попросил [RECIPIENT_nameDef]: "Спой мне о пушистом котенке!"</li>
+        <li>r_logentry->[INITIATOR_nameDef] потребовал от [RECIPIENT_nameDef] исполнить "Песню о пушистом котенке".</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li>r_logentry->[RECIPIENT_nameDef] услышал странную просьбу от [INITIATOR_nameDef].</li>
+        <li>r_logentry->[RECIPIENT_nameDef] был озадачен просьбой [INITIATOR_nameDef] о песне.</li>
+      </rulesStrings>
+    </logRulesRecipient>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+  </InteractionDef>
+  
+</Defs>

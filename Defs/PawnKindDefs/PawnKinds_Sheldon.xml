@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+		
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>SheldonClone_Colonist</defName>
+		<label>клон Шелдона</label>
+		<race>SheldonClone</race>
+		<defaultFactionType>SheldonClones_PlayerFaction</defaultFactionType>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		
+		<!-- Полностью заменяем категории предысторий -->
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SheldonCloneBackstory</li> <!-- Только наша категория -->
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+
+	</PawnKindDef>
+	
+	<PawnKindDef Name="SheldonCloneNPCBase" Abstract="True">
+		<defaultFactionType>SheldonClone_Faction</defaultFactionType>
+		<race>SheldonClone</race>
+		
+		<!-- Полностью заменяем категории предысторий -->
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SheldonCloneBackstory</li> <!-- Только наша категория -->
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<initialWillRange>0~1</initialWillRange>
+
+	</PawnKindDef>
+	
+	
+	<!--Боевая группа-->
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_FieldTheorist</defName>
+		<label>полевой теоретик</label>
+		<combatPower>100</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<factionLeader>false</factionLeader>
+		<maxGenerationAge>50</maxGenerationAge>
+		<minGenerationAge>19</minGenerationAge>
+		<apparelMoney>800~2000</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<weaponMoney>600~1500</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.85</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_ComputationSpecialist</defName>
+		<label>специалист по вычислительным методам</label>
+		<combatPower>110</combatPower>
+		<itemQuality>Good</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<factionLeader>false</factionLeader>
+		<maxGenerationAge>52</maxGenerationAge>
+		<minGenerationAge>22</minGenerationAge>
+		<apparelMoney>700~1200</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<weaponMoney>600~1500</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.95</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_FieldExperimenter</defName>
+		<label>полевой экспериментатор</label>
+		<combatPower>130</combatPower>
+		<itemQuality>Good</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<factionLeader>false</factionLeader>
+		<maxGenerationAge>50</maxGenerationAge>
+		<minGenerationAge>19</minGenerationAge>
+		<apparelMoney>1000~1500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>Gun</li>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<weaponMoney>800~1900</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.85</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_TacticalAnalyst</defName>
+		<label>тактический аналитик</label>
+		<combatPower>200</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<factionLeader>false</factionLeader>
+		<maxGenerationAge>48</maxGenerationAge>
+		<minGenerationAge>25</minGenerationAge>
+		<apparelMoney>800~4000</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<weaponMoney>1500~3000</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>75</min>
+						<max>200</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Strategist</defName>
+		<label>стратег</label>
+		<combatPower>250</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>true</isFighter>
+		<factionLeader>false</factionLeader>
+		<maxGenerationAge>50</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+		<apparelMoney>2800~5500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<weaponMoney>2500~5000</weaponMoney>
+		<weaponStuffOverride>Plasteel</weaponStuffOverride>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>100</min>
+						<max>250</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<!--Мирная группа-->
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Scientist</defName>
+		<label>учёный</label>
+		<combatPower>20</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>45</maxGenerationAge>
+		<minGenerationAge>16</minGenerationAge>
+		<apparelMoney>100~500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Researcher</defName>
+		<label>исследователь</label>
+		<combatPower>40</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>55</maxGenerationAge>
+		<minGenerationAge>22</minGenerationAge>
+		<apparelMoney>100~600</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Theorist</defName>
+		<label>теоретик</label>
+		<combatPower>40</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>50</maxGenerationAge>
+		<minGenerationAge>20</minGenerationAge>
+		<apparelMoney>100~600</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	
+	
+	<!-- Торговая группа -->
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Trader</defName>
+		<label>торговец</label>
+		<combatPower>20</combatPower>
+		<itemQuality>Good</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>55</maxGenerationAge>
+		<minGenerationAge>17</minGenerationAge>
+		<trader>true</trader>
+		<factionLeader>false</factionLeader>
+		<apparelMoney>1200~2000</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>200</min>
+						<max>500</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<!-- Поселение -->
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Lecturer</defName>
+		<label>лектор</label>
+		<combatPower>40</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>56</maxGenerationAge>
+		<minGenerationAge>25</minGenerationAge>
+		<apparelMoney>1000~1500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<weaponMoney>600~1200</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Professor</defName>
+		<label>профессор</label>
+		<combatPower>50</combatPower>
+		<itemQuality>Good</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<maxGenerationAge>80</maxGenerationAge>
+		<minGenerationAge>30</minGenerationAge>
+		<apparelMoney>1100~2500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>20</min>
+						<max>75</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="SheldonCloneNPCBase">
+		<defName>SheldonClone_Leader</defName>
+		<label>лидер клонов</label>
+		<combatPower>20</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<isFighter>false</isFighter>
+		<factionLeader>true</factionLeader>
+		<maxGenerationAge>62</maxGenerationAge>
+		<minGenerationAge>32</minGenerationAge>
+		<apparelMoney>500~1500</apparelMoney>
+		<apparelTags>
+			<li>StandartSheldoneClones</li>
+			<li>IndustrialMilitaryBasic</li>
+			<li>BeltDefensePop</li>
+		</apparelTags>
+		<specificApparelRequirements>
+		</specificApparelRequirements>
+		<apparelDisallowTags>
+		</apparelDisallowTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>200~1000</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<techHediffsChance>0.15</techHediffsChance>
+		<techHediffsMoney>300~900</techHediffsMoney>
+		<inventoryOptions>
+			<skipChance>0.25</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>100</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>10</min>
+						<max>300</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+</Defs>

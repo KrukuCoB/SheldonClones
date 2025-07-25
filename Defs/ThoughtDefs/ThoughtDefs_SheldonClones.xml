@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>SheldonWarnedForTakingMySeat</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>1</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<socialTargetDevelopmentalStageFilter>Baby, Child, Adult</socialTargetDevelopmentalStageFilter>
+		<stages>
+			<li>
+				<label>занял моё место</label>
+				<baseOpinionOffset>-2</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>SheldonWarnedForTakingMySeatMood</thoughtToMake>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>SheldonWarnedForTakingMySeatMood</defName>
+		<durationDays>0.2</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>кто-то снова занял моё место</label>
+				<description>Если такое повторится, придётся накладывать меры!</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>NeighborAgreementSignedMood</defName>
+		<durationDays>0.5</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<nullifyingHediffs>
+			<li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+		</nullifyingHediffs>
+		<stages>
+			<li>
+				<label>сосед согласился на соглашение</label>
+				<description>Нисколько не удивлён, это ведь важнейшая часть во взаимоотношениях между людьми!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NeighborAgreementSignedSocial</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>15</durationDays>
+		<stages>
+			<li>
+				<label>подписали соглашение</label>
+				<baseOpinionOffset>10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NeighborAgreementRefusedMood</defName>
+		<durationDays>0.5</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+			<label>сосед отказался подписать соглашение</label>
+			<description>Сосед отказался подписать соглашение, мы что варвары?!</description>
+			<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>NeighborAgreementRefusedSocial</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>отказался подписать соглашение</label>
+				<baseOpinionOffset>-10</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+	
+	<!-- Шелдон раздражающий -->
+	
+	<ThoughtDef>
+    <defName>SheldonAnnoyingInteraction</defName>
+	<thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>100</stackLimitForSameOtherPawn>
+	<stackedEffectMultiplier>1</stackedEffectMultiplier>
+	<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <socialTargetDevelopmentalStageFilter>Baby, Child, Adult</socialTargetDevelopmentalStageFilter>
+    <stages>
+      <li>
+        <label>раздражён разговором</label>
+        <baseOpinionOffset>-1</baseOpinionOffset>
+      </li>
+    </stages>
+	<thoughtToMake>SheldonAnnoyingInteractionMood</thoughtToMake>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>SheldonAnnoyingInteractionMood</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>100</stackLimit>
+    <stackedEffectMultiplier>1</stackedEffectMultiplier>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>раздражён разговором</label>
+        <description>С ним невозможно разговаривать!</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+</Defs>

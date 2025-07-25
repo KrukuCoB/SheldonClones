@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<MentalBreakDef>
+	  <defName>CleaningFrenzyBreak</defName>
+	  <mentalState>CleaningFrenzy</mentalState>
+	  <baseCommonality>0.8</baseCommonality>
+	  <intensity>Minor</intensity>
+	</MentalBreakDef>
+	<MentalStateDef>
+		<defName>CleaningFrenzy</defName>
+		<stateClass>SheldonClones.MentalState_CleaningFrenzy</stateClass>
+		<workerClass>SheldonClones.MentalStateWorker_CleaningFrenzy</workerClass>
+		<label>уборочный психоз</label>
+		<category>Misc</category>
+		<stopsJobs>true</stopsJobs>
+		<prisonersCanDo>false</prisonersCanDo>
+		<colonistsOnly>true</colonistsOnly>
+		<minTicksBeforeRecovery>25000</minTicksBeforeRecovery>
+		<maxTicksBeforeRecovery>45000</maxTicksBeforeRecovery>
+		<recoveryMtbDays>0.166</recoveryMtbDays>
+		<recoverFromSleep>true</recoverFromSleep>
+		<nameColor>(0.5, 0.9, 0.5)</nameColor>
+		<beginLetterLabel>уборочный психоз</beginLetterLabel>
+		<beginLetter>{0} начинает убирать все подряд</beginLetter>
+		<beginLetterDef>NegativeEvent</beginLetterDef>
+		<moodRecoveryThought>Catharsis</moodRecoveryThought>
+		<recoveryMessage>{0} закончил с уборкой.</recoveryMessage>
+		<baseInspectLine>Ментальное состояние: неконтролируемая уборка</baseInspectLine>
+		<allowBeatfire>true</allowBeatfire>
+		<escapingPrisonersIgnore>true</escapingPrisonersIgnore>
+	</MentalStateDef>
+	
+</Defs>

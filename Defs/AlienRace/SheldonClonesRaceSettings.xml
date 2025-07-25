@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.RaceSettings>
+	<defName>SheldonClonesRaceSettings</defName>
+	<pawnKindSettings>			
+		<startingColonists>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>SheldonClone_Colonist</li>
+						</kindDefs>
+						<chance>25.0</chance>
+					</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>PlayerColony</li>
+				</factionDefs>
+			</li>
+		</startingColonists>
+				
+		<alienwandererkinds>
+			<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>SheldonClone_Colonist</li>
+						</kindDefs>
+						<chance>15.0</chance>
+					</li>
+				</pawnKindEntries>
+				<factionDefs>
+					<li>PlayerColony</li>
+					<li>PlayerTribe</li>
+				</factionDefs>
+			</li>
+		</alienwandererkinds>			
+	</pawnKindSettings>
+</AlienRace.RaceSettings>
+
+</Defs>

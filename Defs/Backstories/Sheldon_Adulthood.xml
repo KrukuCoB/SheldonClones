@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Defs>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_CrimeFighter</defName>
+		<title>борец с преступностью</title>
+		<titleShort>супергерой</titleShort>
+		<slot>Adulthood</slot>
+		<description>Как и его кумиры супергерои, [PAWN_nameDef], стал героем на планете на которой оказался. Он боролся с преступностью и несправедливостью мира, создав собственный костюм и игрушки, которые помогали ему в его неблагодарном деле.</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Melee>5</Melee>
+			<Crafting>6</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<requiredWorkTags>
+			Intellectual
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+		<passions>
+		</passions>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PlanetLord</defName>
+		<title>повелитель планеты</title>
+		<titleShort>повелитель</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] стал повелителем собственной планеты. Ему удалось заставить людей подчиняться себе, даже несмотря на все свои личностные недостатки. Однако это не могло продолжаться слишком долго, хоть и продолжалось, но все его решения на посту правителя привели к тому, что практически всё население планеты его возненавидело.</description>
+		<skillGains>
+			<Social>12</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<requiredWorkTags>
+			Intellectual
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+		<passions>
+		</passions>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ChairTheorist</defName>
+		<title>теоретик стульев</title>
+		<titleShort>эксперт по стульям</titleShort>
+		<slot>Adulthood</slot>
+		<description>После многих лет страданий от неподходящих сидений, [PAWN_nameDef] посвятил свою жизнь изучению эргономики. Он написал 12-томный труд "Трон разума", в котором классифицировал все известные виды стульев и доказал, почему только один из них — идеален.</description>
+		<skillGains>
+			<Construction>3</Construction>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>ManualDumb, Mining</workDisables>
+		<requiredWorkTags>
+			Intellectual
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PhysicsEditor</defName>
+		<title>редактор научного журнала</title>
+		<titleShort>редактор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] стал главным редактором межзвёздного журнала "Физическая недобыль", хотя и был его единственным читателем. Он отклонял все поданные статьи, кроме собственных, с пометкой "недостаточная компетенция".</description>
+		<skillGains>
+			<Social>-2</Social>
+			<Artistic>3</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<requiredWorkTags>
+			Intellectual
+		</requiredWorkTags>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ColliderGuard</defName>
+		<title>охранник коллайдера</title>
+		<titleShort>охранник</titleShort>
+		<slot>Adulthood</slot>
+		<description>Оказавшись не у дел, [PAWN_nameDef] устроился охранять старый частично разрушенный ускоритель частиц. Это место вдохновляло его на размышления, особенно когда он гонялся за крысами с монтировкой, представляя, что это бозоны Хиггса.</description>
+		<skillGains>
+			<Melee>4</Melee>
+			<Construction>3</Construction>
+		</skillGains>
+		<workDisables>Artistic, Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_DebateRegular</defName>
+		<title>дебатёр-одиночка</title>
+		<titleShort>дебатёр</titleShort>
+		<slot>Adulthood</slot>
+		<description>После многочисленных изгнаний из университетов и форумов, [PAWN_nameDef] организовал собственный "дискуссионный клуб". Он участвовал в нём один, спорил сам с собой и иногда побеждал.</description>
+		<skillGains>
+			<Social>6</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_CandyArchivist</defName>
+		<title>архивариус обёрток</title>
+		<titleShort>обёртолог</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] однажды заметил, что обёртки от конфет идеально отражают дух эпохи. Он посвятил свою жизнь систематизации, сканированию и каталогизации более 200 тысяч экземпляров. Никто, включая его самого в конце концов, так и не понял зачем.</description>
+		<skillGains>
+			<Artistic>3</Artistic>
+			<Crafting>4</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PhobAnalyst</defName>
+		<title>аналитик страхов</title>
+		<titleShort>фобовед</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] составил полный каталог личных страхов и начал активно анализировать их. Наибольшее внимание он уделил пункту "млекопитающие весом до 30 кг", а особенно собакам. После одного особенно неприятного случая отказался работать с животными вообще.</description>
+		<skillGains>
+			<Medicine>2</Medicine>
+			<Social>2</Social>
+		</skillGains>
+		<workDisables>Animals, Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ScheduleMaster</defName>
+		<title>мастер графиков</title>
+		<titleShort>тайм-лорд</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] считал, что идеальный распорядок дня — это высшая форма искусства. Он составлял расписание с точностью до миллисекунды и почти всегда его придерживался. Написал книгу по тайм-менеджменту, которая моментально стала бестселлером из-за того, что продавалась почти бесплатно и рекламировалась как "новая Библия".</description>
+		<skillGains>
+			<Construction>4</Construction>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_Sheldonaut</defName>
+		<title>автор учения "Шелдонавтика"</title>
+		<titleShort>шелдонавт</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] разработал собственную философско-практическую систему под названием "Шелдонавтика", включающую 47 правил общения, 37 стадий извинений, 97 способов приветствия, а также ритуал умывания перед занятием фермерством. Стал гуру.</description>
+		<skillGains>
+			<Social>4</Social>
+			<Plants>3</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_FieldLabTech</defName>
+		<title>полевой лаборант</title>
+		<titleShort>лаборант</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] провёл несколько лет в мобильной научной лаборатории, сопровождая экспедиции на враждебные планеты. Он собирал образцы, обслуживал оборудование и страдал от отсутствия кондиционера. С тех пор к жаре и замкнутым пространствам относится с ненавистью.</description>
+		<skillGains>
+			<Medicine>4</Medicine>
+			<Construction>2</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ScienceConsultant</defName>
+		<title>научный консультант</title>
+		<titleShort>консультант</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] был нанят для проверки научной достоверности в развлекательных шоу и фильмах. Его замечания часто приводили к полному переписыванию сценария, увеличению бюджета и отмене съёмок. Но достоверность важнее драмы, верно?</description>
+		<skillGains>
+			<Social>-3</Social>
+			<Plants>2</Plants>
+			<Animals>2</Animals>
+		</skillGains>
+		<workDisables>ManualDumb, Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PreciseFarmer</defName>
+		<title>педантичный фермер</title>
+		<titleShort>фермер</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] решил вырастить "идеальный помидор", используя точные расчёты кислотности почвы, влажности и астрономического положения планет. Урожай был неплохой, но никто не заметил разницы. Кроме него самого, конечно.</description>
+		<skillGains>
+			<Plants>6</Plants>
+			<Cooking>2</Cooking>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_LifeSupportTech</defName>
+		<title>техник жизнеобеспечения</title>
+		<titleShort>техник</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] следил за состоянием систем кислородоснабжения и рециркуляции воздуха на орбитальной станции. Даже незначительное отклонение от нормы вызывало у него приступ тревоги, но система работала безотказно. Чего не скажешь о нём самом.</description>
+		<skillGains>
+			<Construction>4</Construction>
+			<Crafting>3</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_BallisticsExpert</defName>
+		<title>теоретик баллистики</title>
+		<titleShort>баллистик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] провёл годы, анализируя траектории, сопротивление воздуха и поведение пуль в условиях низкой гравитации. Сначала это была просто теория... пока он не начал практиковаться на стрельбище, чтобы подтвердить расчёты.</description>
+		<skillGains>
+			<Shooting>7</Shooting>
+			<Crafting>2</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SimWarrior</defName>
+		<title>участник симулированной войны</title>
+		<titleShort>сим-боец</titleShort>
+		<slot>Adulthood</slot>
+		<description>Когда симулятор боя стал доступен для общественности, [PAWN_nameDef] быстро занял первое место в глобальных таблицах. Его виртуальный счёт был рекордным, никто долгое время не мог даже близко подойти к его результату, пока его рекорд все-таки не побил кто-то под ником "Crafter".</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Social>1</Social>
+		</skillGains>
+		<workDisables>Crafting, Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_DuckHunter</defName>
+		<title>охотник за утками</title>
+		<titleShort>утколов</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время длительной изоляции [PAWN_nameDef] начал охоту на уток недалеко от места дислокации, чтобы выжить и не умереть со скуки. В итоге охота стала делом всей его жизни. Ни одна пернатая угроза не улетала живой.</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Cooking>2</Cooking>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SafetyInstructor</defName>
+		<title>инструктор по безопасности</title>
+		<titleShort>инструктор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] обучал волонтеров обращению с оружием исключительно в теории... пока однажды ему не пришлось применить знания на практике, когда один из них не перепутал неопределённую формe глагола с определённой. С тех пор он тренируется ежедневно.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Social>-2</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_RangeWarden</defName>
+		<title>смотритель полигона</title>
+		<titleShort>смотритель</titleShort>
+		<slot>Adulthood</slot>
+		<description>Когда [PAWN_nameDef] устроился работать на стрельбище, он планировал лишь следить за порядком и бумажками. Но довольно скоро начал сам тренироваться — сначала чтобы "показать, как надо", а потом — просто из принципа, и потому что у него это стало хорошо получаться.</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Construction>1</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_NerfCollector</defName>
+		<title>коллекционер бластеров</title>
+		<titleShort>коллекционер</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] начал с того, что купил один нерф-бластер "на память". Через пару лет его коллекция превысила 300 единиц, а умение стрелять из них превзошло всё, что когда-либо видели другие клоны.</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Artistic>1</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_LaserSafetyOfficer</defName>
+		<title>офицер лазерной безопасности</title>
+		<titleShort>лазер-инспектор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] работал на космическом заводе, где проводил тренировки по обращению с лазерами и обезвреживанию неисправных турелей. Практика стрельбы была не обязательной... но он всё равно практиковался.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Crafting>2</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ChessSniper</defName>
+		<title>снайпер шахматной лиги</title>
+		<titleShort>снайпер</titleShort>
+		<slot>Adulthood</slot>
+		<description>После поражения на чемпионате по шахматам из-за того, что не мог держать рот закрытым, [PAWN_nameDef] создал собственную лигу, где игроки соревновались в стрельбе по фигурам с расстояния в 1000 метров. Интеллект — это хорошо, но точность — лучше, точнее, точнее.</description>
+		<skillGains>
+			<Shooting>7</Shooting>
+			<Social>-3</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_BorderMarksman</defName>
+		<title>пограничный стрелок</title>
+		<titleShort>пограничник</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] работал на отдалённой границе колонии, где часто приходилось отражать периодические атаки дикарей и контрабандистов. Его внимание к деталям и навязчивое стремление к порядку делали его незаменимым стрелком.</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Plants>2</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ShootingInstructor</defName>
+		<title>инструктор по стрельбе</title>
+		<titleShort>инструктор</titleShort>
+		<slot>Adulthood</slot>
+		<description>После прохождения базовой подготовки на одной "горячей" планете, [PAWN_nameDef] остался в учебном центре в роли инструктора. Его ученики называли его "машиной", хотя он просто соблюдал протокол до запятой и не терпел импровизации.</description>
+		<skillGains>
+			<Shooting>8</Shooting>
+			<Social>1</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_TacticalScout</defName>
+		<title>тактический разведчик</title>
+		<titleShort>разведчик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] работал в составе разведывательной группы во враждебных мирах. Его задачей было наблюдение за местными формами жизнями, но часто приходилось и брать в руки оружие. Он редко говорил, зато всегда стрелял первым и точно.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Construction>2</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MeteorDefenseOperator</defName>
+		<title>оператор метеоритной обороны</title>
+		<titleShort>оператор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] пришлось надолго застрять на орбитальной станции посреди опасного скопления астероидов. Ему приходилось довольно часто сбивать летящие на станцию астероиды с помощью управляемой турели. Что он делал с огромным удовольствием.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Construction>2</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_AutoTargetTester</defName>
+		<title>испытатель систем наведения</title>
+		<titleShort>испытатель</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] участвовал в разработке новой системы автоматического наведения для оборонительных турелей. В какой-то момент тесты стали настолько увлекательными, что он начал соревноваться с алгоритмами, стараясь обогнать их по точности.</description>
+		<skillGains>
+			<Shooting>7</Shooting>
+			<Crafting>3</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_VRShootingCoach</defName>
+		<title>тренер VR-стрельбы</title>
+		<titleShort>VR-инструктор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] разработал и преподавал курс "Теория и практика стрельбы в виртуальной среде". Он доказал, что идеальная точность — это не дело инстинкта, а строго математически выводимая дисциплина. Многие студенты плакали на его занятиях.</description>
+		<skillGains>
+			<Shooting>7</Shooting>
+			<Social>2</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SpaceArchaeologist</defName>
+		<title>космический археолог</title>
+		<titleShort>археолог</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время раскопок древнего спутника, [PAWN_nameDef] был вынужден защищать экспедицию от агрессивных дронов. После этого случая он всегда носил с собой модифицированный карабин... и тренировался стрелять между раскопками.</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Plants>2</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_BallisticsResearcher</defName>
+		<title>исследователь баллистики</title>
+		<titleShort>баллистик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] посвятил несколько лет анализу баллистических траекторий в условиях нестабильной гравитации. Когда пришло время для практического подтверждения теорий, он начал стрелять сам — с точностью до микрометра.</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Artistic>4</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_WeaponsCurator</defName>
+		<title>куратор вооружения</title>
+		<titleShort>куратор</titleShort>
+		<slot>Adulthood</slot>
+		<description>Работая в музее колониального вооружения, [PAWN_nameDef] не удержался от идеи проверить точность всех экспонатов. По ночам он устраивал испытания на заднем участке музея, на удивление — с прекрасным результатом.</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Social>-3</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_DroneAimingEngineer</defName>
+		<title>инженер точности дронов</title>
+		<titleShort>дрон-инженер</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] участвовал в разработке дронов, способных стрелять с высокой точностью на дальних дистанциях. Часто ему приходилось проводить тесты лично, на которых выяснилось, что и сам он стреляет неплохо.</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Crafting>3</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_RescueDroneController</defName>
+		<title>координатор спасательных дронов</title>
+		<titleShort>координатор</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время нападения механоидов на исследовательскую базу, [PAWN_nameDef] управлял спасательными дронами, прикрывая эвакуацию турелью с ручным управлением. После этого случая он стал тайно тренироваться стрелять, «на всякий случай».</description>
+		<skillGains>
+			<Shooting>6</Shooting>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_CommsRelayDefender</defName>
+		<title>защитник ретранслятора</title>
+		<titleShort>ретрансляторщик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] оказался единственным техником на коммуникационном посту, когда из ближайших руин пробудились механоиды. Активировать связь было невозможно, бежать — некуда. Он провёл трое суток за пулемётной турелью, записывая каждый выстрел в журнал.</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MechanoidRuinsSurvivor</defName>
+		<title>исследователь древнего комплекса</title>
+		<titleShort>выживший</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время археологической экспедиции [PAWN_nameDef] случайно активировал древнее механоидное захоронение. Из обломков поднялся жнец, и началась бойня. Он выжил только благодаря двум турелям, которые атаковали жнеца не переставая, [PAWN_nameDef] приходилось только перезаряжать боезапас в турелях и корректировать их огонь.</description>
+		<skillGains>
+			<Shooting>5</Shooting>
+			<Crafting>2</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MechanoidSimulatorOperator</defName>
+		<title>оператор симулятора механоидов</title>
+		<titleShort>симуляторщик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] работал на станции, где отрабатывались сценарии нападений механоидов. Он не участвовал в настоящем бою, но ежедневно управлял программой моделирования атак сентипед и термитов, тестируя и анализируя все боевые параметры.</description>
+		<skillGains>
+			<Shooting>4</Shooting>
+			<Artistic>3</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_IttakinCaptive</defName>
+		<title>пленник иттаков</title>
+		<titleShort>пленник</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] попал в плен к группе Иттакинских пиратов и был вынужден участвовать в их "играх на выживание" — ежедневных поединках с голыми руками. Он выжил благодаря наблюдательности, аналитике движений противников и превосходной памяти.</description>
+		<skillGains>
+			<Melee>6</Melee>
+			<Social>1</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_StressFightTest</defName>
+		<title>тестируемый в стресс-бою</title>
+		<titleShort>подопытный</titleShort>
+		<slot>Adulthood</slot>
+		<description>В рамках исследования по нейрофизиологии стресса [PAWN_nameDef] согласился участвовать в контролируемых поединках против механических манекенов. Он изначально был против, но после того, как начал анализировать каждый свой удар, в конце концов научился давать сдачи.</description>
+		<skillGains>
+			<Melee>5</Melee>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MeleeMechRuins</defName>
+		<title>археолог руин</title>
+		<titleShort>археолог</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время раскопок древнего командного центра механоидов [PAWN_nameDef] активировал защитную систему. Не теряя времени на размышления он схватил первый попавшийся обломок трубы и начал отбиваться, пока ему не удалось отключить питание комплекса.</description>
+		<skillGains>
+			<Melee>6</Melee>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PirateCombatStudy</defName>
+		<title>исследователь боевых техник</title>
+		<titleShort>боевой теоретик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] провёл полгода в подземном поселении, изучая ближний бой у пиратов-неудачников. Его изначально приняли за переводчика, но он быстро стал "живым тренажёром". Ему удалось записать и проанализировать 837 поединков, включая те, в которых он принимал непосредственное участие.</description>
+		<skillGains>
+			<Melee>7</Melee>
+			<Crafting>1</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ImpactTheorist</defName>
+		<title>теоретик удара</title>
+		<titleShort>ударолог</titleShort>
+		<slot>Adulthood</slot>
+		<description>Во время эксперимента по передаче кинетической энергии [PAWN_nameDef] выдвинул гипотезу, что существует "математически идеальный удар". Он пытался его воспроизвести на лабораторных манекенах, пока не был вынужден перейти на коллег. Хоть коллеги и не были рады таким экспериментам, по итогу данные, что удалось успеть получить, оказались бесценны.</description>
+		<skillGains>
+			<Melee>6</Melee>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_LibraryBrawler</defName>
+		<title>боец за книги</title>
+		<titleShort>драчун</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] был завсегдатаем университетской библиотеки, и особенно обожал один редкий и ветхий том. Каждый раз, когда кто-то пытался взять его в руки, случалась "спонтанная интеллектуальная шутка с физическим подкреплением". Ему удавалось побеждать почти всегда.</description>
+		<skillGains>
+			<Melee>5</Melee>
+			<Social>2</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_NoTouchTraining</defName>
+		<title>тренер самоизоляции</title>
+		<titleShort>интроверт</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] никогда не любил, когда его обнимают. Поэтому после очередных попыток отбиться от любителя обнимашек, [PAWN_nameDef] записался на курсы обороны. Он утверждал, что это "научный способ обозначить личные границы". После чего желающих обнять [PAWN_nameDef] резко убавилось.</description>
+		<skillGains>
+			<Melee>4</Melee>
+			<Social>-1</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SuperheroImitator</defName>
+		<title>подражатель супергероям</title>
+		<titleShort>герой</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] настолько вдохновился боевыми сценами из любимых комиксов, что начал тренироваться, копируя движения героев. Он изучал технику ударов, захватов и поворотов настолько точно, что вскоре у него начало получаться, но не всегда.</description>
+		<skillGains>
+			<Melee>5</Melee>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_VentFighter</defName>
+		<title>победитель механоида</title>
+		<titleShort>победитель</titleShort>
+		<slot>Adulthood</slot>
+		<description>Оказавшись заблокированным в вентиляционной системе при штурме исследовательского комплекса механоидом-драгуном, [PAWN_nameDef] сражался врукопашную, используя кусок трубы и элемент охлаждения. Победил он или дрон отключился — до сих пор спорят.</description>
+		<skillGains>
+			<Melee>4</Melee>
+			<Construction>2</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PirateGuide</defName>
+		<title>проводник среди каннибалов</title>
+		<titleShort>проводник</titleShort>
+		<slot>Adulthood</slot>
+		<description>В научных целях [PAWN_nameDef] пытался наблюдать за культурой пиратов-каннибалов, выдавая себя за шамана. Однажды его разоблачили, и он начал отбиваться всем, что попадалось под руку — от чашек до черепов. Но он выжил. И вернулся с потрясающим полевым журналом.</description>
+		<skillGains>
+			<Melee>7</Melee>
+			<Social>1</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SymmetryArchitect</defName>
+		<title>архитектор симметрии</title>
+		<titleShort>архитектор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] не мог выносить асимметрию в интерьере. Не найдя подходящего жилья, он построил собственное — идеально выровненное по осям, углам и тени в полдень. С тех пор он проектировал десятки зданий, но больше не смог построить ничего столь же совершенного.</description>
+		<skillGains>
+			<Construction>4</Construction>
+			<Artistic>4</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_LabSiteRebuilder</defName>
+		<title>восстановитель базы</title>
+		<titleShort>строитель базы</titleShort>
+		<slot>Adulthood</slot>
+		<description>После обрушения исследовательского комплекса из-за землетрясения, [PAWN_nameDef] сам организовал восстановительные работы. Он не доверял подрядчикам, так как они были всего лишь инженерами. В итоге восстановительные работы продлились долгие годы, но это того стоило.</description>
+		<skillGains>
+			<Construction>6</Construction>
+			<Crafting>2</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MicroHousingContestant</defName>
+		<title>конструктор микро-домов</title>
+		<titleShort>конструктор</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] поспорил, что сможет создать самое маленькое, минималистское жильё для комфортного проживания в нём одного человека. [PAWN_nameDef] создал сверхкомпактную капсулу с душем, рабочим местом и турелью безопасности, на случай незваных гостей.</description>
+		<skillGains>
+			<Construction>6</Construction>
+			<Plants>1</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ShelterFixer</defName>
+		<title>ремонтник убежища</title>
+		<titleShort>ремонтник</titleShort>
+		<slot>Adulthood</slot>
+		<description>Когда обрушился купол научного убежища, [PAWN_nameDef] оказался заперт внутри вместе с несколькими коллегами. Он быстро адаптировался, завладел инструментами и восстановил обрушившиеся конструкции. Главное — держать потолок сверху, а разум ещё выше.</description>
+		<skillGains>
+			<Construction>5</Construction>
+			<Medicine>2</Medicine>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PirateConstructionSlave</defName>
+		<title>строитель по принуждению</title>
+		<titleShort>пленник</titleShort>
+		<slot>Adulthood</slot>
+		<description>Пойманный пиратами-неудачниками, [PAWN_nameDef] был вынужден заниматься ремонтом их убежищ и турелей. Не желая погибнуть, он отнёсся к работе как к задаче по выживанию. Вскоре его конструкции стали лучше, чем всё, что было у пиратов до него.</description>
+		<skillGains>
+			<Construction>7</Construction>
+			<Plants>1</Plants>
+			<Cooking>2</Cooking>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SuperLairEngineer</defName>
+		<title>инженер логова</title>
+		<titleShort>логовостроитель</titleShort>
+		<slot>Adulthood</slot>
+		<description>Мечтая о собственной супергеройской карьере, [PAWN_nameDef] начал с главного — постройки тайного логова. В нём были поворотные стены, потайные двери и даже система тревоги, активируемая словами «Бугагашенька». Через несколько лет он обнаружил, что не хочет становиться героем и стал строителем убежищ.</description>
+		<skillGains>
+			<Construction>6</Construction>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PostWarBuilder</defName>
+		<title>послевоенный строитель</title>
+		<titleShort>волонтёр</titleShort>
+		<slot>Adulthood</slot>
+		<description>После разрушительного конфликта с механоидами [PAWN_nameDef] присоединился к добровольческой группе, восстанавливающей поселения. Он не был силён физически, но руководил процессами и лично работал, если кто-то не достаточно хорошо выравнивал стены.</description>
+		<skillGains>
+			<Construction>4</Construction>
+			<Social>1</Social>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_ScytherShellRestorer</defName>
+		<title>реставратор механоидов</title>
+		<titleShort>техноархеолог</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] изучал останки сентипеды в лабораторных условиях. Чтобы понять конструкцию, он начал восстанавливать корпус, используя найденные обломки и собственные чертежи. В какой-то момент результат начал оживать… он отключил питание и притворился, что этого не было.</description>
+		<skillGains>
+			<Construction>4</Construction>
+			<Artistic>2</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_CannibalEscapeBuilder</defName>
+		<title>сбежавший узник</title>
+		<titleShort>беглец</titleShort>
+		<slot>Adulthood</slot>
+		<description>Пойманный пиратами-каннибалами, [PAWN_nameDef] выдал себя за "архитектора укреплений" и месяцами тайно строил туннель на свободу, под предлогом установки вентиляции. Когда он сбежал, пираты нашли только надпись на стене: «IQ > мясо».</description>
+		<skillGains>
+			<Construction>3</Construction>
+			<Plants>3</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_PlasteelSheldon</defName>
+		<title>теоретик-инженер в плену</title>
+		<titleShort>пластальный человек</titleShort>
+		<slot>Adulthood</slot>
+		<description>Пленённый пиратами-неудачниками и будучи запертым в старом ангаре, [PAWN_nameDef] обнаружил груду пластали, генератор и газовый сварочник. Через месяц он сбежал, находясь внутри гремящего экзокостюма с механическими конечностями. Пираты не могли видеть его улыбки, но после всего [PAWN_nameDef] рассказывал, что это был его самый счастливый момент в жизни.</description>
+		<skillGains>
+			<Construction>8</Construction>
+			<Crafting>6</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_SmartClothingEngineer</defName>
+		<title>технолог одежды</title>
+		<titleShort>портной-изобретатель</titleShort>
+		<slot>Adulthood</slot>
+		<description>Попав в плен к пиратам-неудачникам, [PAWN_nameDef] был вынужден работать за ткацким станком. Вскоре он начал модифицировать одежду, которую изготовливал. Начал с того, что добавил к лабораторному халату систему вентиляции и подогрева. Затем были брюки с датчиком влажности, затем маска для лица, которая меняла голос и позволяла дышать под водой. Впрочем, всех модификаций [PAWN_nameDef] и не упомнить.</description>
+		<skillGains>
+			<Crafting>7</Crafting>
+			<Plants>1</Plants>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+	
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MechanoidTinker</defName>
+		<title>разборщик механоидов</title>
+		<titleShort>разборщик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] собирал и разбирал неисправных жнецов, тщательно документируя всё: от термопроводности до креплений брони. В какой-то момент он понял, что начал собирать новую, улучшенную версию жнеца, после чего быстро её разобрал.</description>
+		<skillGains>
+			<Crafting>6</Crafting>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_MiniatureTactician</defName>
+		<title>создатель фигурок</title>
+		<titleShort>модельщик</titleShort>
+		<slot>Adulthood</slot>
+		<description>Увлёкшись настольными тактическими играми, [PAWN_nameDef] начал создавать собственные фигурки. Его модели были настолько детально проработанными, что однажды их приняла за реальных бойцов охранная турель. Он был горд собой.</description>
+		<skillGains>
+			<Crafting>6</Crafting>
+			<Artistic>1</Artistic>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>SheldonClone_DroneDesigner</defName>
+		<title>разработчик дронов</title>
+		<titleShort>дронщик</titleShort>
+		<slot>Adulthood</slot>
+		<description>[PAWN_nameDef] участвовал в проекте по созданию вспомогательных дронов для колоний. Он был ответственен за оптимизацию и полевые тесты. В одном из отчётов он заявил: "Я наконец создал что-то, что будет слушать меня беспрекословно".</description>
+		<skillGains>
+			<Crafting>7</Crafting>
+			<Construction>1</Construction>
+		</skillGains>
+		<workDisables>Mining</workDisables>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<spawnCategories>
+			<li>SheldonCloneBackstory</li>
+		</spawnCategories>
+	</AlienRace.AlienBackstoryDef>
+
+
+
+</Defs>

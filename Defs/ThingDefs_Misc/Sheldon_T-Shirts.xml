@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <ThingDef Name="ApparelBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<techLevel>Medieval</techLevel>
+		<graphicData>
+		    <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+		    <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>0.9</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+			<Beauty>1</Beauty>
+	    </statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<generateCommonality>0.5</generateCommonality>
+	    <generateAllowChance>0.1</generateAllowChance>
+		<tickerType>Never</tickerType>
+		<burnableByRecipe>true</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+			<li>
+                <compClass>CompQuality</compClass>
+            </li>
+    </comps>
+	</ThingDef>
+   
+   <ThingDef Name="ShAmy" ParentName="ApparelBase" Abstract="True">
+        <recipeMaker>
+		    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<researchPrerequisite>ComplexClothing</researchPrerequisite>
+			<recipeUsers Inherit="False">
+				<li>ElectricTailoringBench</li>
+				<li>HandTailoringBench</li>
+			</recipeUsers>
+			<skillRequirements>
+			    <Crafting>2</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<tradeability>Sellable</tradeability>
+    </ThingDef>
+   
+   
+   
+   <ThingDef ParentName="ShAmy">
+		<defName>KC_GreenLantern</defName>
+		<label>Green lantern</label>
+		<description>Whaddaya get when you take one green alien and add one power ring? Why, The Green Lantern, of course! This is simple arithmetic, guys, and probably the most famous equation in history (aside from that whole e=mc²).</description>
+		<graphicData>
+			<texPath>Things/Apparels/GreenLantern/GreenLantern</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>2900</WorkToMake>
+			<Mass>0.35</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/GreenLantern/GreenLantern</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>SheldonClones_Starting</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+            <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+   
+   
+   <ThingDef ParentName="ShAmy">
+        <defName>KC_BestNumber</defName>
+		<label>T-shirt with the best number</label>
+		<description>The best number is 73. 73 is the 21st prime number. Its mirror, 37, is the 12th, and its mirror, 21, is the product of multiplying seven and three and in binary, 73 is a palindrome, 1001001, which backwards is 1001001.</description>
+		<graphicData>
+			<texPath>Things/Apparels/BestNumber/BestNumber</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>2900</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/BestNumber/BestNumber</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+   
+   
+   <ThingDef ParentName="ShAmy">
+        <defName>KC_Flash</defName>
+		<label>Flash</label>
+		<description>T-shirt with the symbol of a very fast guy.</description>
+		<graphicData>
+			<texPath>Things/Apparels/Flash/Flash</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Flash/Flash</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+   
+   
+   <ThingDef ParentName="ShAmy">
+        <defName>KC_Hawkman</defName>
+		<label>Hawkman</label>
+		<description>Here we have a shirt depicting the logo of DC comics most well known and beloved superhero Hawkman (bazinga).</description>
+		<graphicData>
+			<texPath>Things/Apparels/Hawkman/Hawkman</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3000</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Hawkman/Hawkman</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+   
+   
+   <ThingDef ParentName="ShAmy">
+        <defName>KC_PrehistoricMonsters</defName>
+		<label>Prehistoric monsters.</label>
+		<description>There are dinosaurs on it, in case someone didn't understand, not leaves.</description>
+		<graphicData>
+			<texPath>Things/Apparels/PrehistoricMonsters/PrehistoricMonsters</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3200</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/PrehistoricMonsters/PrehistoricMonsters</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+		<options>
+		    <li>
+				<weight>6</weight>
+				<min>RGBA(0.1,0.3,0.2,1)</min>
+				<max>RGBA(0.3,1,0.6,1)</max>
+			</li>
+		</options>
+	</colorGenerator>
+	</ThingDef>
+   
+   
+   <ThingDef ParentName="ShAmy">
+        <defName>KC_RubiksCubeMelting</defName>
+		<label>Melting rubik's cube</label>
+		<description>Just a black shirt with a spilled rubik's cubes.</description>
+		<graphicData>
+			<texPath>Things/Apparels/RubiksCubeMelting/RubiksCubeMelting</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3500</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/RubiksCubeMelting/RubiksCubeMelting</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_TVTestPattern</defName>
+		<label>TV Test Pattern</label>
+		<description>Ah, the TV test pattern. Now, in the days of raiders, mechanoids, cannibals, crazed squirrels and a lot of other things that are trying to kill you, you kids probably won't recognize this sucker (it's really a lost art). This particular pattern is the Philips PM5544 pattern.</description>
+		<graphicData>
+			<texPath>Things/Apparels/TVTestPattern/TVTestPattern</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3800</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/TVTestPattern/TVTestPattern</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_GreatestAmericanHero</defName>
+		<label>Greatest American Hero</label>
+		<description>One of the weirdest TV shows of the 80s of the 20th century, broadcast on planet Earth, "The Greatest American Hero". According to the book, The World Encyclopedia of Superheroes, the symbol is intended to represent an open book and a needle. Series creator, Stephen J. Cannell, however, states that the idea came due to a pair of scissors he had sitting on his desk during the design of the uniform. The truth, we may never know...</description>
+		<graphicData>
+			<texPath>Things/Apparels/GreatestAmericanHero/GreatestAmericanHero</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3100</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/GreatestAmericanHero/GreatestAmericanHero</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_Batman</defName>
+		<label>Batman</label>
+		<description>2900</description>
+		<graphicData>
+			<texPath>Things/Apparels/Batman/Batman</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3100</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Batman/Batman</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_Superman</defName>
+		<label>Superman</label>
+		<description>This is the clean, classic Man of Steel logo using the classic Man of Steel colors.</description>
+		<graphicData>
+			<texPath>Things/Apparels/Superman/Superman</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3250</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Superman/Superman</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_Bazinga</defName>
+		<label>Bazinga</label>
+		<description>Wearing this T-shirt, you will literally transform into Sheldon Cooper. Bazinga!</description>
+		<graphicData>
+			<texPath>Things/Apparels/Bazinga/Bazinga</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3200</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/Bazinga/Bazinga</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_DopplerEffect</defName>
+		<label>Doppler effect</label>
+		<description>Yes. It’s the apparent change in the frequency of a wave caused by relative motion between the source of the wave and the observer.</description>
+		<graphicData>
+			<texPath>Things/Apparels/DopplerEffect/DopplerEffect</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>4000</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/DopplerEffect/DopplerEffect</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	
+	
+	
+	<ThingDef ParentName="ShAmy">
+        <defName>KC_BazingaDB</defName>
+		<label>Bazinga (navy blue)</label>
+		<description>Wearing this T-shirt, you will literally transform into Sheldon Cooper. Bazinga!</description>
+		<graphicData>
+			<texPath>Things/Apparels/BazingaDB/BazingaDB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToMake>3200</WorkToMake>
+			<Mass>0.2</Mass>
+			<StuffEffectMultiplierArmor>0.02</StuffEffectMultiplierArmor>
+			<StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+			<EquipDelay>1.5</EquipDelay>
+		</statBases>
+		<thingCategories Inherit='False'>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+		    <countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<wornGraphicPath>Things/Apparels/BazingaDB/BazingaDB</wornGraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<tags>
+				<li>IndustrialBasic</li>
+				<li>StandartSheldoneClones</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+   
+   
+</Defs>

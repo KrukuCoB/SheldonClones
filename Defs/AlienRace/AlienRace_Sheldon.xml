@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace ParentName="Human">
+		<defName>SheldonClone</defName>
+		<label>Клон Шелдона</label>
+		<description>Гениальный, но социально странный клон легендарного Шелдона Купера. После сохранения своего мозга и последующего клонирования, Шелдоны заполонили галактику, принося с собой как невероятный интеллект, так и характерные особенности личности</description>
+		<alienRace>
+			<generalSettings>
+			
+				<factionRelations>
+					<li>
+						<factions>
+							<li>SheldonClones_PlayerFaction</li>
+						</factions>
+					<goodwill>
+						<min>75</min>
+						<max>100</max>
+					</goodwill>
+					</li>
+				</factionRelations>
+				<maleGenderProbability>1.0</maleGenderProbability>
+				
+				<!-- Обязательные черты -->
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>Abrasive</defName>				<!-- Грубый -->
+					</li>					
+				</forcedRaceTraitEntries>
+				
+				<disallowedTraits>
+					<!-- Полностью запрещённые черты -->
+					<li>
+						<defName>DislikesMen</defName>			<!-- Мужененависть -->
+					</li>
+					<li>
+						<defName>DislikesWomen</defName>		<!-- Женоненависть -->
+					</li>
+					<li>
+						<defName>Kind</defName>					<!-- Добрый -->
+					</li>
+					<li>
+						<defName>Nudist</defName>				<!-- Нудист -->
+					</li>
+					<li>
+						<defName Degree="2">Cannibal</defName>	<!-- Канибаллизм -->
+					</li>
+					<li>
+						<defName Degree="1">Cannibal</defName>	<!-- Канибаллизм -->
+					</li>
+					<li>
+						<defName Degree="2">Beauty</defName>	<!-- Невероятная красота -->
+					</li>
+					<li>
+						<defName Degree="1">Beauty</defName>	<!-- Красота -->
+					</li>
+					<li>
+						<defName>Brawler</defName>				<!-- Драчливость -->
+					</li>
+					<li>
+						<defName>Masochist</defName>			<!-- Мазохист -->
+					</li>
+					<li>
+						<defName>Nimble</defName>				<!-- Ловкость -->
+					</li>
+					<li>
+						<defName>SlowLearner</defName>			<!-- Медленная обучаемость -->
+					</li>
+					<!-- Черты с ограниченным шансом появления -->
+					<li>
+						<defName Degree="-2">Beauty</defName>	<!-- Невероятное уродство -->
+						<chance>50</chance>
+					</li>
+					<li>
+						<defName Degree="-1">Beauty</defName>	<!-- Уродство -->
+						<chance>50</chance>
+					</li>
+				</disallowedTraits>
+				
+				<additionalTraits>1</additionalTraits>
+				<maxDamageForSocialfight>0,5</maxDamageForSocialfight>
+				<allowHumanBios>true</allowHumanBios>
+				<immuneToXenophobia>true</immuneToXenophobia>
+				<humanRecipeImport>true</humanRecipeImport>
+				<notXenophobistTowards>
+					<li>Human</li>
+				</notXenophobistTowards>
+				<reproduction>
+					<maleFertilityAgeFactor>
+						<points>
+							<li>(14, 0)</li>
+							<li>(18, 0)</li>
+							<li>(50, 0)</li>
+							<li>(90, 0)</li>
+						</points>
+					</maleFertilityAgeFactor>
+				</reproduction>
+				<ageSkillFactorCurve>
+					<points>
+						<li>(3, 0)</li>
+						<li>(18, 0.5)</li>
+						<li>(35, 1)</li>
+						<li>(60, 1)</li>
+					</points>
+				</ageSkillFactorCurve>
+				
+				<alienPartGenerator>
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="SheldonClones.ColorGenerator_SheldonSkin" />
+							<second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+							  <colorChannel>skin_1</colorChannel>
+							</second>
+						  </li>
+					</colorChannels>
+					<headTypes Inherit="False">
+						<li>Male_NarrowPointy</li>
+					</headTypes>
+					<bodyTypes Inherit="False">
+						<li>Male</li>
+						<li>Thin</li>
+					</bodyTypes>
+				
+				</alienPartGenerator>
+
+
+			</generalSettings>
+			
+			<graphicPaths>
+			</graphicPaths>
+			
+			<styleSettings></styleSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+					<li>AteWithoutTable</li>
+				</cannotReceiveThoughts>
+			</thoughtSettings>
+			<relationSettings>
+				<relationChanceModifierLover>0.2</relationChanceModifierLover>
+				<relationChanceModifierExLover>0.05</relationChanceModifierExLover>
+				<relationChanceModifierFiance>0.15</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>0.1</relationChanceModifierSpouse>
+				<relationChanceModifierExSpouse>0.02</relationChanceModifierExSpouse>
+				<relationChanceModifierParent>0</relationChanceModifierParent>
+				<relationChanceModifierChild>0</relationChanceModifierChild>
+				<relationChanceModifierSibling>0</relationChanceModifierSibling>
+			</relationSettings>
+			<raceRestriction>
+				<onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+				<apparelList>
+					<li>KC_GreenLantern</li>
+					<li>KC_BestNumber</li>
+					<li>KC_Flash</li>
+					<li>KC_Hawkman</li>
+					<li>KC_PrehistoricMonsters</li>
+					<li>KC_RubiksCubeMelting</li>
+					<li>KC_TVTestPattern</li>
+					<li>KC_GreatestAmericanHero</li>
+					<li>KC_Batman</li>
+					<li>KC_Superman</li>
+					<li>KC_Bazinga</li>
+					<li>KC_DopplerEffect</li>
+					<li>KC_BazingaDB</li>
+				</apparelList>
+				<blackGeneTags>
+						<li>SkinColor</li>
+						<li>BodyType</li>
+						<li>Head</li>
+						<li>Headbone</li>
+						<li>Ears</li>
+						<li>Nose</li>
+						<li>Jaw</li>
+						<li>HairStyle</li>
+						<li>BeardStyle</li>
+						<li>SkinColorOverride</li>
+					</blackGeneTags>
+			</raceRestriction>
+			<compatibility></compatibility>
+		</alienRace>
+		<statBases>
+			<MoveSpeed>6</MoveSpeed>
+			<PainShockThreshold>0.5</PainShockThreshold>
+			<MentalBreakThreshold>0.5</MentalBreakThreshold>
+			<SocialImpact>-0.4</SocialImpact>
+			<PsychicSensitivity>0.6</PsychicSensitivity>
+			<NegotiationAbility>-0.5</NegotiationAbility>
+			<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+			<ImmunityGainSpeed>1.2</ImmunityGainSpeed>
+			<ResearchSpeed>2.0</ResearchSpeed>
+			<GlobalLearningFactor>1.25</GlobalLearningFactor>
+			<MiningSpeed>0.2</MiningSpeed>
+			<ConstructionSpeed>0.2</ConstructionSpeed>
+			<ConstructionSpeedFactor>0.5</ConstructionSpeedFactor>
+			<SmoothingSpeed>0.1</SmoothingSpeed>
+			<PlantWorkSpeed>0.4</PlantWorkSpeed>
+			<AnimalGatherSpeed>0.2</AnimalGatherSpeed>
+			<ButcheryMechanoidSpeed>1.4</ButcheryMechanoidSpeed>
+			<ReadingSpeed>2.0</ReadingSpeed>
+		</statBases>
+		<comps>
+		  <li Class="SheldonClones.CompProperties_NeighborAgreement" />
+		  <li Class="SheldonClones.CompProperties_SleepDisturbanceWatcher" />
+		</comps>
+
+
+
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>

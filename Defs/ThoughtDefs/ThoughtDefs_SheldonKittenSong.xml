@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <ThoughtDef>
+    <defName>SheldonWeirdRequest</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>странная просьба</label>
+        <description>Он попросил меня спеть ему о пушистом котенке. Это странно, но мило.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SheldonKittenSongSatisfied</defName>
+    <durationDays>2</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>песня о пушистом котенке</label>
+        <description>Мне спели песню о пушистом котенке! Это было необходимо для моего выздоровления.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SheldonKittenSongRefused</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>отказ петь о котенке</label>
+        <description>Мне отказались спеть песню о пушистом котенке! Это неприемлемо. Как я могу выздороветь без этого?</description>
+        <baseMoodEffect>-12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<InteractionDef>
+		<defName>ProposeNeighborAgreement</defName>
+		<label>предложил соседское соглашение</label>
+		<workerClass>SheldonClones.InteractionWorker_NeighborAgreement</workerClass>
+		<symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+		<logRulesInitiator>
+			<rulesStrings>
+				<li>r_logentry->[INITIATOR_nameDef] предложил [RECIPIENT_nameDef] подписать соседское соглашение о проживании.</li>
+			</rulesStrings>
+		</logRulesInitiator>
+	</InteractionDef>
+
+</Defs>

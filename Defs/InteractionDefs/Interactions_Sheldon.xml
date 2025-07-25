@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <!-- Немного фактов от Шелдона -->
+  
+  <InteractionDef>
+    <defName>SheldonFacts</defName>
+    <label>немного фактов от Шелдона</label>
+    <workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <initiatorThought>FactChat</initiatorThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <!-- Основные шаблоны -->
+        <li>r_logentry->[INITIATOR_nameDef] [factabout] [subject] [RECIPIENT_nameDef].</li>
+        <li>r_logentry->[INITIATOR_nameDef] [factwith] [subject] с [RECIPIENT_nameDef].</li>
+
+		<li>subject(INITIATOR_cubeInterest==false)->[TalkTopicLight]</li>
+        <li>subject(INITIATOR_cubeInterest==true)->[TalkTopicCube]</li>
+
+        <!-- Действия рассказывания фактов -->
+		<li>factabout->рассказал факт</li>
+        <li>factabout->рассказал интересный факт</li>
+        <li>factabout->рассказал не особо интересный факт</li>
+        <li>factabout->снова начал рассказывать</li>
+		<li>factabout->рассказал интересную историю</li>
+
+        <li>factwith->поделился фактом</li>
+
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+  <!-- Шелдон поправляющий-->
+  
+  <InteractionDef>
+    <defName>SheldonCorrected</defName>
+    <label>Шелдон поправил другого в разговоре</label>
+    <workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+	<recipientThought>CorrectedChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+		<li>r_logentry->[INITIATOR_nameDef] [corrected] [RECIPIENT_nameDef], сказав, что [whatcorrected].</li>
+		<li>r_logentry->[INITIATOR_nameDef] сказал, что [aboutcorrected].</li>
+		<li>r_logentry->[INITIATOR_nameDef] [corrected] неверное ударение [RECIPIENT_nameDef] в слове [wordcorrected].</li>
+	   
+		<li>corrected->поправил</li>
+		<li>corrected->исправил</li>
+	   
+		<li>whatcorrected->физиологически невозможно умереть от стыда</li>
+		<li>whatcorrected->кругозор не пополняют, а расширяют</li>
+		<li>whatcorrected->нет слова «махает», но есть «машет»</li>
+		<li>whatcorrected->нет слова «ихний», но есть «их»</li>
+		<li>whatcorrected->слово «карабкаться», как правило, обозначает движение вверх, а не вниз</li>
+		<li>whatcorrected->прилагательное «лучший» не имеет степеней сравнения</li>
+		<li>whatcorrected->«одолжить» обозначает «дать взаймы», а не «взять взаймы»</li>
+		<li>whatcorrected->«кофе» — он, мужского рода, независимо от ваших чувств</li>
+		<li>whatcorrected->«более лучше» — это масло масляное</li>
+		<li>whatcorrected->«попробывать» — нет такого слова, правильно — «попробовать»</li>
+		
+		<li>aboutcorrected->[RECIPIENT_nameDef] не закончил предложение</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] неоправданно часто повторяется</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] нарушил порядок слов в предложении</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] объясняется совершенно бессвязно</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] неудачно закончил мысль</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] непонимает значение слова</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] сообщил неверную дату</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] утверждает взаимоисключающие понятия</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] неверно образовал форму прилагательного</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] неверно образовал форму глагола</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] употребил слово в не подходящем для него значении</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] нарушил границы предложения</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] использовал слово-паразит</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] не согласовал подлежащее и сказуемое</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] поставил ударение не на тот слог</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] использовал тавтологию</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] ошибся в роде существительного</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] употребил несочетаемые слова</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] допустил ошибку в падеже</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] не различает совершенный и несовершенный вид глагола</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] нарушил норму сочетаемости слов</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] перепутал стилистические регистры</li>
+		<li>aboutcorrected->[RECIPIENT_nameDef] использует слова, значение которых ему неведомо</li>
+		
+		
+		<li>wordcorrected->облегчить</li>
+		<li>wordcorrected->балует</li>
+		<li>wordcorrected->грушевый</li>
+		<li>wordcorrected->торты</li>
+		<li>wordcorrected->банты</li>
+		<li>wordcorrected->граффити</li>
+		<li>wordcorrected->жалюзи</li>
+		<li>wordcorrected->фетиш</li>
+		<li>wordcorrected->черпать</li>
+		<li>wordcorrected->новорождённый</li>
+		<li>wordcorrected->танцовщица</li>
+		<li>wordcorrected->вероисповедание</li>
+		<li>wordcorrected->включит</li>
+		<li>wordcorrected->принудить</li>
+		<li>wordcorrected->кровоточащая</li>
+		<li>wordcorrected->согнутый</li>
+		<li>wordcorrected->рефлексия</li>
+		<li>wordcorrected->красивее</li>
+		<li>wordcorrected->создал</li>
+		<li>wordcorrected->трубопровод</li>
+		<li>wordcorrected->завидно</li>
+		<li>wordcorrected->кулинария</li>
+		<li>wordcorrected->закупорить</li>
+		<li>wordcorrected->феномен</li>
+		<li>wordcorrected->искра</li>
+		<li>wordcorrected->сироты</li>
+		<li>wordcorrected->умерший</li>
+	  </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+  <!-- Шелдон раздражающий -->
+  
+  <InteractionDef>
+    <defName>SheldonAnnoying</defName>
+    <label>Шелдон раздражает остальных</label>
+    <workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] трижды постучал и произнес имя [RECIPIENT_nameDef]</li>
+		<li>r_logentry->[INITIATOR_nameDef] сказал [RECIPIENT_nameDef], что у них нет пересекающихся интересов, а ещё, что он индифферентен к пустой трескотне.</li>
+		<li>r_logentry->[INITIATOR_nameDef] сказал [RECIPIENT_nameDef], что предпочёл бы не обсуждать с [RECIPIENT_nameDef] никаких личных вопросов.</li>
+		<li>r_logentry->[INITIATOR_nameDef] сказал, что не сможет сохранить тайну [RECIPIENT_nameDef]</li>
+		<li>r_logentry->[INITIATOR_nameDef] требует [RECIPIENT_nameDef] освободить его от клятвы.</li>
+	  </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+  <!-- Типичные розыгрыши Шелдона -->
+  
+  <InteractionDef>
+    <defName>SheldonBazinga</defName>
+    <label>бугагашенька</label>
+    <workerClass>SheldonClones.InteractionWorker_CloneSheldonOnly</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/KindWords</symbol>
+	<initiatorThought>PrankChat</initiatorThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] разыграл [RECIPIENT_nameDef] и с триумфом воскликнул "Бугагашенька!"</li>
+        <li>r_logentry->[INITIATOR_nameDef] рассказал [RECIPIENT_nameDef] научную шутку и закончил её словом "Бугагашенька!"</li>
+        <li>r_logentry->[INITIATOR_nameDef] саркастически прокомментировал действия [RECIPIENT_nameDef], добавив "Бугагашенька!"</li>
+		<li>r_logentry->[INITIATOR_nameDef] предложил [RECIPIENT_nameDef], составить личный гороскоп, добавив "Бугагашенька!"</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  
+</Defs>

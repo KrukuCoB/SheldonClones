@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>SheldonClones_PlayerFaction</defName>
+		<label>Колония клонов Шелдона</label>
+		<description>Группа умнейших людей во Вселенной. Или нет?</description>
+		<techLevel>Industrial</techLevel>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>SheldonClone_Colonist</basicMemberKind>
+		<pawnSingular>клон Шелдона</pawnSingular>
+		<pawnsPlural>клoны Шелдона</pawnsPlural>
+		<categoryTag>SheldonClones_PlayerFaction</categoryTag>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<rescueesCanJoin>true</rescueesCanJoin>
+
+		<raidLootValueFromPointsCurve>
+			<points>
+				<li>(35,     15)</li>
+				<li>(100,   120)</li>
+				<li>(1000,  500)</li>
+				<li>(2000,  800)</li>
+				<li>(4000, 1000)</li>
+			 </points>
+		</raidLootValueFromPointsCurve>
+
+		<!-- Ограничение предысторий для всех членов фракции -->
+		<backstoryFilters>
+          <li>
+              <categories>
+                 <li>SheldonCloneBackstory</li>
+              </categories>
+          </li>
+        </backstoryFilters>
+		
+		<!-- Иконка фракции и текстура поселений на мировой карте -->
+		<factionIconPath>SheldonClones/Faction/Icon</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+	
+	</FactionDef>
+	
+	<!-- Нейтральная/неигровая фракция -->
+	<FactionDef ParentName="FactionBase">
+		<defName>SheldonClone_Faction</defName>
+		<label>институт клонов Шелдона</label>
+		<fixedName>Калтех-2</fixedName>
+		<description>Колония гениальных клонов Шелдона Купера, посвятивших себя науке и теоретической физике. Они могут показаться высокомерными, но их интеллект неоспорим.</description>
+		<naturalEnemy>false</naturalEnemy>      <!-- дружелюбны по умолчанию -->
+		<permanentEnemy>false</permanentEnemy>
+		<hidden>false</hidden>
+		<techLevel>Industrial</techLevel>
+		<pawnSingular>клон Шелдона</pawnSingular>
+		<pawnsPlural>клоны Шелдона</pawnsPlural>
+		<colorSpectrum>
+			<li>(253,219,186)</li>
+		</colorSpectrum>
+		<categoryTag>Outlander</categoryTag>
+		
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>10</configurationListOrderPriority>
+		<listOrderPriority>28</listOrderPriority>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<allowedCultures><li>Rustican</li></allowedCultures>
+	
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>SheldonCloneBackstory</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+	
+		<!-- Какой PawnKind использовать для торговцев/караванов -->
+		<basicMemberKind>SheldonClone_Trader</basicMemberKind>
+
+		<!-- Генерация поселений на мировой карте -->
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxCountAtGameStart>3</maxCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>false</canSiege>
+		<canStageAttacks>false</canStageAttacks>
+		<autoFlee>false</autoFlee>
+		<mustStartOneEnemy>false</mustStartOneEnemy>
+		<factionIconPath>SheldonClones/Faction/Icon</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<leaderTitle>Главный теоретик</leaderTitle>
+	
+		<fixedLeaderKinds>
+			<li>SheldonClone_Leader</li>
+		</fixedLeaderKinds>
+		
+		<!-- Караваны, которые они могут собирать и присоединяться -->
+		<caravanTraderKinds>
+			<li>Caravan_Outlander_BulkGoods</li>
+			<li>Caravan_Outlander_Exotic</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Visitor_Outlander_Standard</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Outlander_Standard</li>
+		</baseTraderKinds>
+	
+		<!-- Материалы для одежды -->
+		<apparelStuffFilter>
+			<stuffCategoriesToAllow>
+				<li>Metallic</li>
+				<li>Fabric</li>
+			</stuffCategoriesToAllow>
+			<disallowedThingDefs>
+				<li>Synthread</li>
+				<li>Hyperweave</li>
+			</disallowedThingDefs>
+		</apparelStuffFilter>
+	
+		<!-- Температурный диапазон -->
+		<allowedArrivalTemperatureRange>-20~40</allowedArrivalTemperatureRange>
+		
+		<!-- Кривая стоимости персонажей -->
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1000, 150)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		
+		<pawnGroupMakers>
+			<!-- Боевая группа -->
+			<li>
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<SheldonClone_FieldTheorist>10</SheldonClone_FieldTheorist>
+					<SheldonClone_ComputationSpecialist>8</SheldonClone_ComputationSpecialist>
+					<SheldonClone_FieldExperimenter>5</SheldonClone_FieldExperimenter>
+					<SheldonClone_TacticalAnalyst>3</SheldonClone_TacticalAnalyst>
+					<SheldonClone_Strategist>1</SheldonClone_Strategist>
+				</options>
+			</li>
+			
+			<!-- Мирная группа -->
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<SheldonClone_Scientist>15</SheldonClone_Scientist>
+					<SheldonClone_Researcher>10</SheldonClone_Researcher>
+					<SheldonClone_Theorist>8</SheldonClone_Theorist>
+				</options>
+			</li>
+			
+			<!-- Торговая группа -->
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<SheldonClone_Trader>1</SheldonClone_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>6</Muffalo>
+					<Dromedary>5</Dromedary>
+					<Alpaca>2</Alpaca>
+				</carriers>
+				<guards>
+					<SheldonClone_FieldTheorist>8</SheldonClone_FieldTheorist>
+					<SheldonClone_FieldExperimenter>5</SheldonClone_FieldExperimenter>
+				</guards>
+			</li>
+			
+			<!-- Поселение -->
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<!-- Боевая группа -->
+					<SheldonClone_ComputationSpecialist>7</SheldonClone_ComputationSpecialist>
+					<SheldonClone_TacticalAnalyst>5</SheldonClone_TacticalAnalyst>
+					<SheldonClone_Strategist>3</SheldonClone_Strategist>
+					<!-- Мирная группа -->
+					<SheldonClone_Scientist>7</SheldonClone_Scientist>
+					<SheldonClone_Researcher>8</SheldonClone_Researcher>
+					<SheldonClone_Theorist>6</SheldonClone_Theorist>
+					<SheldonClone_Lecturer>3</SheldonClone_Lecturer>
+					<SheldonClone_Professor>2</SheldonClone_Professor>
+					<SheldonClone_Leader>1</SheldonClone_Leader>
+				</options>
+			</li>
+		</pawnGroupMakers>
+
+	</FactionDef>
+	
+	
+</Defs>
